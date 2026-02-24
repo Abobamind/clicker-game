@@ -2,39 +2,26 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Кликер с целями и магазином</title>
+<title>Супер Кликер</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>💰 Кликер 💰</h1>
+<h1>Супер Кликер</h1>
+
+<button id="clickButton">Кликни меня!</button>
 <div id="score">Очки: 0</div>
+<div id="clickPowerDisplay">Очки за клик: 1</div>
+<div id="autoClickDisplay">Автоклик: 0</div>
 
-<div id="scene">🪙</div>
-
-<div>
-  <div class="upgrade" id="upgradeClick">+Click</div>
-  <div class="progress-container"><div id="clickProgress" class="progress-bar"></div></div>
-
-  <div class="upgrade" id="upgradeAuto">Auto+</div>
-  <div class="progress-container"><div id="autoProgress" class="progress-bar"></div></div>
-
-  <div class="upgrade" id="upgradeMultiplier">x2</div>
-  <div class="progress-container"><div id="multiProgress" class="progress-bar"></div></div>
-</div>
-
-<h2>🎯 Цели</h2>
-<div id="goals">
-  <div class="goal" data-target="100">Набрать 100 очков: <span class="progress">0</span>/100</div>
-  <div class="goal" data-target="500">Набрать 500 очков: <span class="progress">0</span>/500</div>
-  <div class="goal" data-target="50" data-type="clicks">Сделать 50 кликов: <span class="progress">0</span>/50</div>
-</div>
-
-<h2>Магазин</h2>
 <div id="shop">
-  <div class="shop-item" id="hat">🎩 Шляпа (50)</div>
-  <div class="shop-item" id="chest">💰 Сундук (100)</div>
+  <h2>Магазин апгрейдов</h2>
+  <button id="upgradeClick">Улучшить клик (+1 очко за клик, 10 очков)</button>
+  <button id="buyAutoClick">Купить автоклик (+1 в секунду, 50 очков)</button>
+</div>
+
+<div id="achievements">
+  <h2>Достижения</h2>
 </div>
 
 <script src="script.js"></script>
