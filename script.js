@@ -16,6 +16,7 @@ const clickPowerDisplay = document.getElementById('clickPowerDisplay');
 const autoClickDisplay = document.getElementById('autoClickDisplay');
 const achievementsDiv = document.getElementById('achievements');
 
+// Обновление интерфейса
 function updateDisplay() {
     scoreDisplay.textContent = 'Очки: ' + gameData.score;
     clickPowerDisplay.textContent = 'Очки за клик: ' + gameData.clickPower;
@@ -23,10 +24,12 @@ function updateDisplay() {
     updateAchievements();
 }
 
+// Сохранение прогресса
 function saveGame() {
     localStorage.setItem('gameData', JSON.stringify(gameData));
 }
 
+// Клик по кнопке
 button.addEventListener('click', () => {
     gameData.score += gameData.clickPower;
     checkAchievements();
