@@ -8,14 +8,14 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 8vw; /* размер шрифта под экран */
     color: #ffcc00;
 }
 
 button {
-    font-size: 22px;
-    padding: 15px 25px;
-    margin: 10px;
+    font-size: 4vw; /* адаптивные кнопки */
+    padding: 2vw 4vw;
+    margin: 1vw;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -29,18 +29,18 @@ button:hover {
 }
 
 #score, #clickPowerDisplay, #autoClickDisplay, #achievements {
-    font-size: 24px;
-    margin-top: 15px;
+    font-size: 4vw; /* адаптивный текст */
+    margin-top: 1vw;
 }
 
 #shop {
-    margin-top: 30px;
+    margin-top: 5vw;
 }
 
 .game-area {
-    margin-bottom: 20px;
+    margin-bottom: 5vw;
     position: relative;
-    height: 300px;
+    height: 50vw; /* высота области под экран */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,11 +49,22 @@ button:hover {
 }
 
 #clickCoin {
-    font-size: 100px;
+    font-size: 20vw; /* монета масштабируется под экран */
     cursor: pointer;
     transition: transform 0.1s;
     user-select: none;
 }
 #clickCoin:active {
     transform: scale(0.9);
+}
+
+/* Дополнительно для маленьких экранов */
+@media (max-width: 600px) {
+    button {
+        font-size: 5vw;
+        padding: 3vw 6vw;
+    }
+    #score, #clickPowerDisplay, #autoClickDisplay, #achievements {
+        font-size: 5vw;
+    }
 }
