@@ -9,8 +9,8 @@
 
 <h1>Супер Кликер</h1>
 
-<div class="game-area">
-  <button id="clickButton">Кликни меня!</button>
+<div class="game-area" id="gameArea">
+  <div id="clickCoin">💰</div>
   <div id="score">Очки: 0</div>
   <div id="clickPowerDisplay">Очки за клик: 1</div>
   <div id="autoClickDisplay">Автоклик: 0</div>
@@ -20,11 +20,16 @@
   <h2>Магазин апгрейдов</h2>
   <button id="upgradeClick">Улучшить клик (+1 очко, 10 очков)</button>
   <button id="buyAutoClick">Купить автоклик (+1 в секунду, 50 очков)</button>
+  <button id="superClick">Супер клик (+5 очков за клик, 200 очков)</button>
+  <button id="megaAutoClick">Мега автоклик (+5 очков/сек, 500 очков)</button>
 </div>
 
 <div id="achievements">
   <h2>Достижения</h2>
 </div>
+
+<audio id="clickSound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+<audio id="upgradeSound" src="https://www.soundjay.com/button/sounds/button-10.mp3"></audio>
 
 <script src="script.js"></script>
 </body>
