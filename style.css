@@ -8,14 +8,14 @@ body {
 }
 
 h1 {
-    font-size: 8vw; /* размер шрифта под экран */
+    font-size: clamp(32px, 5vw, 64px); /* минимум 32px, максимум 64px, адаптивно */
     color: #ffcc00;
 }
 
 button {
-    font-size: 4vw; /* адаптивные кнопки */
-    padding: 2vw 4vw;
-    margin: 1vw;
+    font-size: clamp(16px, 2.5vw, 24px);
+    padding: clamp(10px, 1.5vw, 20px) clamp(15px, 3vw, 30px);
+    margin: 10px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -29,27 +29,35 @@ button:hover {
 }
 
 #score, #clickPowerDisplay, #autoClickDisplay, #achievements {
-    font-size: 4vw; /* адаптивный текст */
-    margin-top: 1vw;
+    font-size: clamp(16px, 2.5vw, 24px);
+    margin-top: 15px;
 }
 
 #shop {
-    margin-top: 5vw;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* чтобы кнопки не слипались на узких экранах */
+    justify-content: center;
 }
 
 .game-area {
-    margin-bottom: 5vw;
+    margin-bottom: 30px;
     position: relative;
-    height: 50vw; /* высота области под экран */
+    width: 100%;
+    max-width: 500px; /* ограничение для ПК */
+    height: 50vw; /* высота адаптивная */
+    max-height: 500px; /* ограничение для ПК */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #clickCoin {
-    font-size: 20vw; /* монета масштабируется под экран */
+    font-size: clamp(80px, 20vw, 200px); /* минимум, адаптивно, максимум */
     cursor: pointer;
     transition: transform 0.1s;
     user-select: none;
@@ -58,13 +66,12 @@ button:hover {
     transform: scale(0.9);
 }
 
-/* Дополнительно для маленьких экранов */
+/* Малые экраны (мобильные) */
 @media (max-width: 600px) {
-    button {
-        font-size: 5vw;
-        padding: 3vw 6vw;
+    body {
+        padding: 10px;
     }
-    #score, #clickPowerDisplay, #autoClickDisplay, #achievements {
-        font-size: 5vw;
+    #shop {
+        flex-direction: column;
     }
 }
