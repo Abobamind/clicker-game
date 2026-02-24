@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  color: #fff;
+}
+h1 { margin-top: 20px; font-size: 40px; }
+#score { font-size: 28px; margin: 15px 0; }
+
+#scene {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto 20px;
+  background: #2a5298;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.floating { position: absolute; font-size: 20px; font-weight: bold; animation: floatUp 1s forwards; }
+@keyframes floatUp { 0% { opacity:1; transform:translateY(0px);} 100% {opacity:0; transform:translateY(-60px);} }
+
+.coinFall { position: absolute; font-size: 30px; animation: fall 1s linear forwards; }
+@keyframes fall {0% {transform:translateY(0);opacity:1;} 100% {transform:translateY(150px);opacity:0;}}
+
+.upgrade {
+  display: inline-block; width: 140px; height: 50px; margin: 5px;
+  background: #ff9800; border-radius: 12px; cursor: pointer;
+  box-shadow: 0 4px #c77600; line-height: 50px; font-weight: bold; font-size: 16px;
+  transition: 0.2s;
+}
+.upgrade.disabled { opacity:0.5; cursor:not-allowed; }
+.upgrade:active { transform: scale(1.05); box-shadow:0 2px #c77600; }
+
+.progress-container { width:140px; height:10px; background:#333; border-radius:5px; margin:5px auto 10px; overflow:hidden; }
+.progress-bar { height:100%; width:0%; background:#ffeb3b; border-radius:5px; transition:width 0.3s; }
+
+#shop { margin-top:15px; }
+.shop-item { display:inline-block; width:130px; height:50px; margin:5px; background:#4caf50; border-radius:10px; cursor:pointer; line-height:50px; font-weight:bold; font-size:16px; }
+.shop-item.disabled { opacity:0.4; cursor:not-allowed; }
+
+#goals { margin:15px auto; max-width:500px; text-align:left; }
+.goal { background:#222; margin:5px; padding:8px; border-radius:8px; }
+.goal.completed { background:#4caf50; color:#fff; font-weight:bold; }
+
+/* Адаптив для телефонов */
+@media (max-width:600px){
+  h1{font-size:6vw;}
+  #score{font-size:5vw;}
+  #scene{font-size:20vw;height:30vw;}
+  .upgrade{width:35vw;height:10vw;line-height:10vw;font-size:4vw;}
+  .progress-container{width:35vw;height:3vw;}
+  .shop-item{width:33vw;height:10vw;line-height:10vw;font-size:4vw;}
+}
