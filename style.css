@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    font-size: clamp(32px, 5vw, 64px); /* минимум 32px, максимум 64px, адаптивно */
+    font-size: clamp(32px, 5vw, 64px);
     color: #ffcc00;
 }
 
@@ -36,7 +36,7 @@ button:hover {
 #shop {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap; /* чтобы кнопки не слипались на узких экранах */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -44,9 +44,9 @@ button:hover {
     margin-bottom: 30px;
     position: relative;
     width: 100%;
-    max-width: 500px; /* ограничение для ПК */
-    height: 50vw; /* высота адаптивная */
-    max-height: 500px; /* ограничение для ПК */
+    max-width: 500px;
+    height: 50vw;
+    max-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@ button:hover {
 }
 
 #clickCoin {
-    font-size: clamp(80px, 20vw, 200px); /* минимум, адаптивно, максимум */
+    font-size: clamp(80px, 20vw, 200px);
     cursor: pointer;
     transition: transform 0.1s;
     user-select: none;
@@ -66,7 +66,6 @@ button:hover {
     transform: scale(0.9);
 }
 
-/* Малые экраны (мобильные) */
 @media (max-width: 600px) {
     body {
         padding: 10px;

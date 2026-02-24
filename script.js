@@ -50,44 +50,23 @@ gameArea.addEventListener('click', (e) => {
 
 // Апгрейды
 document.getElementById('upgradeClick').addEventListener('click', () => {
-    if(gameData.score >= 10) {
-        gameData.score -= 10;
-        gameData.clickPower += 1;
-        upgradeSound.play();
-        updateDisplay();
-        saveGame();
-    } else { alert('Недостаточно очков!'); }
+    if(gameData.score >= 10) { gameData.score -= 10; gameData.clickPower += 1; upgradeSound.play(); updateDisplay(); saveGame(); }
+    else alert('Недостаточно очков!');
 });
 
 document.getElementById('buyAutoClick').addEventListener('click', () => {
-    if(gameData.score >= 50) {
-        gameData.score -= 50;
-        gameData.autoClickLevel += 1;
-        upgradeSound.play();
-        updateDisplay();
-        saveGame();
-    } else { alert('Недостаточно очков!'); }
+    if(gameData.score >= 50) { gameData.score -= 50; gameData.autoClickLevel += 1; upgradeSound.play(); updateDisplay(); saveGame(); }
+    else alert('Недостаточно очков!');
 });
 
-// Новые апгрейды
 document.getElementById('superClick').addEventListener('click', () => {
-    if(gameData.score >= 200) {
-        gameData.score -= 200;
-        gameData.clickPower += 5;
-        upgradeSound.play();
-        updateDisplay();
-        saveGame();
-    } else { alert('Недостаточно очков!'); }
+    if(gameData.score >= 200) { gameData.score -= 200; gameData.clickPower += 5; upgradeSound.play(); updateDisplay(); saveGame(); }
+    else alert('Недостаточно очков!');
 });
 
 document.getElementById('megaAutoClick').addEventListener('click', () => {
-    if(gameData.score >= 500) {
-        gameData.score -= 500;
-        gameData.autoClickLevel += 5;
-        upgradeSound.play();
-        updateDisplay();
-        saveGame();
-    } else { alert('Недостаточно очков!'); }
+    if(gameData.score >= 500) { gameData.score -= 500; gameData.autoClickLevel += 5; upgradeSound.play(); updateDisplay(); saveGame(); }
+    else alert('Недостаточно очков!');
 });
 
 // Автоклик
